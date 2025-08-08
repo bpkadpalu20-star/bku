@@ -136,9 +136,7 @@
                 <div class="d-md-flex d-block align-items-center justify-content-between my-1 page-header-breadcrumb">
                     <div class="col-xl-6">
                         <label for="input-label" class="form-label">Bulan BKU</label>
-                        <select name="cari_bulan" id="cari_bulan" class="form-control bulanfilter" >
-
-                        </select>
+                       
                     </div>
 
                 </div>
