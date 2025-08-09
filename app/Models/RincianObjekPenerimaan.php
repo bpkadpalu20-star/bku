@@ -12,7 +12,7 @@ class RincianObjekPenerimaan extends Model
     public $table = "rincianobjekpenerimaan";
 
     protected $fillable = [
-        'id','id_op', 'id_op', 'id_opd', 'id_akun', 'id_kelompok', 'kd_jenis', 'kd_objek', 'kd_rincianobjek', 'kode_rincianobjek', 'nilai_pagurincian', 'nilai_realisasirincian', 'bulan_id', 'bulan'
+        'id', 'id_op', 'id_opd', 'id_akun', 'id_kelompok', 'kd_jenis', 'kd_objek', 'kd_rincianobjek', 'kode_rincianobjek', 'nilai_pagurincian', 'nilai_realisasirincian', 'bulan_id', 'bulan'
 
 
 
