@@ -132,7 +132,7 @@ tr:hover {
                                         <tr style="background: rgb(231, 228, 228); color: #000000;">
                                             <td style="width: 10px"></td>
                                             <td style="width: 10px">{{ $Rincian1->kode_rincianobjek }}</td>
-                                            <td style="width: 400px">{{ $Rincian1->uraian_rincianobjek }}</td>
+                                            <td style="width: 400px">{{ $Rincian1->kode_rincianobjek }}</td>
                                             <td style="width: 100px; text-align: right">{{ number_format($Rincian1->nilai_pagurincian, 0, '.', ',') }}</td>
                                             <td style="width: 100px; text-align: right">{{ number_format($Rincian1->nilai_realisasirincian, 0, '.', ',') }}</td>
                                         </tr>
@@ -236,7 +236,7 @@ tr:hover {
                                         <tr style="background: rgb(231, 228, 228); color: #000000;">
                                             <td style="width: 10px"></td>
                                             <td style="width: 10px">{{ $Rincian2->kode_rincianobjek }}</td>
-                                            <td style="width: 400px">{{ $Rincian2->uraian_rincianobjek }}</td>
+                                            <td style="width: 400px">{{ $Rincian2->kode_rincianobjek }}</td>
                                             <td style="width: 100px; text-align: right">{{ number_format($Rincian2->nilai_pagurincian, 0, '.', ',') }}</td>
                                             <td style="width: 100px; text-align: right">{{ number_format($Rincian2->nilai_realisasirincian, 0, '.', ',') }}</td>
                                         </tr>
@@ -342,7 +342,7 @@ tr:hover {
                                         <tr style="background: rgb(231, 228, 228); color: #000000;">
                                             <td style="width: 10px"></td>
                                             <td style="width: 10px">{{ $Rincian3->kode_rincianobjek }}</td>
-                                            <td style="width: 400px">{{ $Rincian3->uraian_rincianobjek }}</td>
+                                            <td style="width: 400px">{{ $Rincian3->kode_rincianobjek }}</td>
                                             <td style="width: 100px; text-align: right">{{ number_format($Rincian3->nilai_pagurincian, 0, '.', ',') }}</td>
                                             <td style="width: 100px; text-align: right">{{ number_format($Rincian3->nilai_realisasirincian, 0, '.', ',') }}</td>
                                         </tr>

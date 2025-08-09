@@ -97,7 +97,7 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
             ->get();
             $KelompokPenerimaan = KelompokPenerimaan::all();
 
-            // $KelompokPenerimaan = OPDPenerimaan::all();
+            $RincianObjekPenerimaan = RincianObjekPenerimaan::all();
 
             $JenisPenerimaan = JenisPenerimaan::join('jenis', 'jenis.id', '=' ,'jenispenerimaan.kd_jenis')
             ->select('jenispenerimaan.*', 'jenis.uraian_jenis')
@@ -105,9 +105,9 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
             $ObjekPenerimaan = ObjekPenerimaan::join('objek', 'objek.id', '=' ,'objekpenerimaan.kd_objek')
             ->select('objekpenerimaan.*', 'objek.uraian_objek')
             ->get();
-            $RincianObjekPenerimaan = RincianObjekPenerimaan::join('rincian_objek', 'rincian_objek.id', '=' ,'rincianobjekpenerimaan.kd_rincianobjek')
-            ->select('rincianobjekpenerimaan.*', 'rincian_objek.uraian_rincianobjek')
-            ->get();
+            // $RincianObjekPenerimaan = RincianObjekPenerimaan::join('rincian_objek', 'rincian_objek.id', '=' ,'rincianobjekpenerimaan.kd_rincianobjek')
+            // ->select('rincianobjekpenerimaan.*', 'rincian_objek.uraian_rincianobjek')
+            // ->get();
             $OPDPenerimaan = OPDPenerimaan::join('sub_rincianobjek', 'sub_rincianobjek.id', '=' ,'opdpenerimaan.kd_subrincianobjek')
                 ->select('opdpenerimaan.*', 'sub_rincianobjek.uraian_subrincianobjek')
                 ->get();
