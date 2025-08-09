@@ -73,20 +73,7 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
     public function tampil(Request $request)
     {
         if ($request->cari_bulan) {
-            $K = 'K';
-            $D = 'D';
             $January = 'January';
-            $February = 'February';
-            $March = 'March';
-            $April = 'April';
-            $May = 'May';
-            $June = 'June';
-            $July = 'July';
-            $August = 'August';
-            $September = 'September';
-            $October = 'October';
-            $November = 'November';
-            $December = 'December';
             $bulan = $request->cari_bulan;
             $Bulan1 = TextBulan::findOrFail($request->cari_bulan);
             $Bulan13 = $Bulan1->kode_bulan;
@@ -143,8 +130,6 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
 
             $idbulan = $request->cari_bulan;
 
-            $SaldoRekKoran = SaldoRekKoran::findOrFail($idbulan);
-            $SaldoRekKoranJanuary = SaldoRekKoran::findOrFail($January);
         return view('laporan.rekappenerimaan.tampil',[
             'bulan' => $bulan,
             'BulanPenerimaan' => $BulanPenerimaan,
@@ -164,9 +149,6 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
             'Kelompoktotal1' => $Kelompoktotal1,
             'Kelompoktotal2' => $Kelompoktotal2,
             'Kelompoktotal3' => $Kelompoktotal3,
-            // 'bkudebetDecember' => $bkudebetDecember,
-            // 'SaldoRekKoran' => $SaldoRekKoran,
-            // 'SaldoRekKoranJanuary' => $SaldoRekKoranJanuary,
 
         ]);
 
@@ -286,7 +268,7 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
             $BKUJenis = BKUJenis::all();
 
         // $Opd = Opd::all();
-        $Opd = Opd::where('Opd.aktif_penerimaan','Y')
+        $Opd = Opd::where('opd.aktif_penerimaan','Y')
         ->get();
         $BulanPenerimaan = BulanPenerimaan::join('opd', 'opd.id', '=' ,'bulanpenerimaan.id_opd')
         ->where('bulanpenerimaan.bulan','like', "%".$request->cari_bulan."%")
@@ -333,10 +315,6 @@ class LaporanRekapPenerimaanController extends Controller implements HasMiddlewa
         'JenisPenerimaan' => $JenisPenerimaan,
         'RincianObjekPenerimaan' => $RincianObjekPenerimaan,
         'BulanPenerimaantotal' => $BulanPenerimaantotal,
-        // 'bkudebetDecember' => $bkudebetDecember,
-        // 'SaldoRekKoran' => $SaldoRekKoran,
-        // 'SaldoRekKoranJanuary' => $SaldoRekKoranJanuary,
-
     ]);
     }
 
